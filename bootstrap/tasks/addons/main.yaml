@@ -24,6 +24,10 @@
   when: system_upgrade_controller.enabled | default(false)
   ansible.builtin.include_tasks: system_upgrade_controller.yaml
 
+- name: Process addon intel-device-plugin
+  when: intel_device_plugin.enabled | default(false)
+  ansible.builtin.include_tasks: intel_device_plugin.yaml
+
 - name: Process addon weave-gitops
   when: weave_gitops.enabled | default(false)
   ansible.builtin.include_tasks: weave_gitops.yaml
