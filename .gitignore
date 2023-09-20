@@ -1,6 +1,7 @@
 # Trash
 .DS_Store
 Thumbs.db
+.idea
 # k8s
 kubeconfig
 .decrypted~*.yaml
@@ -10,3 +11,4 @@ kubeconfig
 *.key
 # Ansible
 .venv*
+.sops.yaml
