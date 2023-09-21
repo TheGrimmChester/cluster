@@ -55,7 +55,7 @@ spec:
     ingress:
       main:
         enabled: true
-        ingressClassName: "nginx"
+        ingressClassName: "external"
         annotations:
           external-dns.home.arpa/enabled: "true"
           nginx.ingress.kubernetes.io/whitelist-source-range: |

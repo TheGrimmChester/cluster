@@ -9,3 +9,7 @@ resources:
   - ./grocy/ks.yaml
   - ./teslamate/ks.yaml
   - ./abrp/ks.yaml
+  - ./theme-park/ks.yaml
+  - ./frigate/ks.yaml
+  - ./registry/ks.yaml
+  - ./registry-ui/ks.yaml

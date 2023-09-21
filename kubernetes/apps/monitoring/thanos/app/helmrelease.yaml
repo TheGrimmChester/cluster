@@ -62,7 +62,7 @@ spec:
         annotations:
           auth.home.arpa/enabled: "true"
           hajimari.io/enable: "false"
-        ingressClassName: "nginx"
+        ingressClassName: "external"
         tls: true
         extraTls:
           - hosts:
@@ -103,7 +103,7 @@ spec:
       ingress:
         enabled: true
         hostname: &host "thanos-compactor.${SECRET_DOMAIN}"
-        ingressClassName: "nginx"
+        ingressClassName: "external"
         annotations:
           hajimari.io/enable: "false"
         tls: true

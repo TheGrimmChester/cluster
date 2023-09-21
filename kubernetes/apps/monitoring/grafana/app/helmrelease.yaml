@@ -169,7 +169,7 @@ spec:
               implementation: prometheus
           - name: TeslaMate
             type: postgres
-            url: "postgres-v15-rw.database.svc.cluster.local"
+            url: "postgres-v15-ro.database.svc.cluster.local"
             user: "${SECRET_USERNAME}"
             secureJsonData:
               password: "${SECRET_PASSWORD}"
