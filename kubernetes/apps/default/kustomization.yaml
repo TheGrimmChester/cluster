@@ -7,3 +7,5 @@ resources:
   - ./minio/ks.yaml
   - ./emqx/ks.yaml
   - ./grocy/ks.yaml
+  - ./teslamate/ks.yaml
+  - ./abrp/ks.yaml
