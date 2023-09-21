@@ -15,10 +15,10 @@ stringData:
 apiVersion: volsync.backube/v1alpha1
 kind: ReplicationSource
 metadata:
-  name: home-assistant-chris
+  name: ha-chris
   namespace: home-automation
 spec:
-  sourcePVC: config-home-assistant-chris-0
+  sourcePVC: config-ha-chris-0
   trigger:
     schedule: "0 22 * * *"
   restic:
