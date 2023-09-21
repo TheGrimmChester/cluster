@@ -10,7 +10,7 @@ spec:
   chart:
     spec:
       chart: rook-ceph-cluster
-      version: v1.11.9
+      version: v1.12.3
       sourceRef:
         kind: HelmRepository
         name: rook-ceph-charts
@@ -42,10 +42,11 @@ spec:
       [global]
       bdev_enable_discard = true
       bdev_async_discard = true
+#      osd_class_update_on_start = false
 
     cephClusterSpec:
       mon:
-        count: 3
+        count: 2
         allowMultiplePerNode: false
 #      dataDirHostPath: /var/lib/rook
       placement:
@@ -59,8 +60,6 @@ spec:
                       values:
                         - vm-1
                         - vm-2
-                        - vm-3
-                        - truenas2012
 
       # cephVersion:
       # image: quay.io/ceph/ceph:v17.2.0
@@ -158,10 +157,10 @@ spec:
 #      network:
 #        provider: host
       network:
-#        hostNetwork: true
+        hostNetwork: true
     ingress:
       dashboard:
-        ingressClassName: nginx
+        ingressClassName: external
         annotations:
 #          nginx.ingress.kubernetes.io/whitelist-source-range: |
 #            10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
