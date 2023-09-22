@@ -13,3 +13,4 @@ resources:
   - ./frigate/ks.yaml
   - ./registry/ks.yaml
   - ./registry-ui/ks.yaml
+  - ./vaultwarden/ks.yaml

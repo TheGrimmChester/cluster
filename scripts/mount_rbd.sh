@@ -8,6 +8,7 @@
 #NAME=sickchill IMAGE=csi-vol-34b6003d-ed7b-4307-8175-8970d96e5d12 ./mount_rbd.sh
 #NAME=epic-free-games IMAGE=csi-vol-a7312366-e639-48c8-90ec-854c7268871b ./mount_rbd.sh
 #NAME=med IMAGE=csi-vol-b87c1b13-46dd-4d85-b9a4-dd533fcd2703 ./mount_rbd.sh
+#NAME=ha-chris IMAGE=csi-vol-8211caad-4302-4855-a1f6-c6ae5097a30b ./mount_rbd.sh
 
 kubectl scale -n media statefulset $NAME --replicas=0
 
