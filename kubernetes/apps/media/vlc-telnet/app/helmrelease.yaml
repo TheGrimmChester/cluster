@@ -31,7 +31,7 @@ spec:
       strategy: RollingUpdate
     image:
       repository: "registry.${SECRET_DOMAIN}/vlc-telnet-docker"
-      tag: "20230812"
+      tag: "20230921"
     env:
       TELNET_PASSWORD: "test"
       VOLUME_LEVEL_PERCENT: 100
