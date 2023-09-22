@@ -22,6 +22,7 @@ includes:
   brew: .taskfiles/BrewTasks.yaml
   cluster: .taskfiles/ClusterTasks.yaml
   volsync: .taskfiles/VolSync/Tasks.yml
+  kubernetes: .taskfiles/Kubernetes/Tasks.yml
 tasks:
 
   default: task -l
