@@ -14,3 +14,4 @@ resources:
   - ./apcupsd/ks.yaml
   - ./apcupsd-exporter/ks.yaml
   - ./ecojoko-exporter/ks.yaml
+  - ./myelectricaldata/ks.yaml
