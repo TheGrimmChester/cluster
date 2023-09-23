@@ -29,7 +29,7 @@ subsets:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
+  name: nas
   annotations:
     hajimari.io/appName: 'NAS'
     nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
