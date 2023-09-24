@@ -226,7 +226,7 @@ spec:
 
           - job_name: ecojoko-exporter
             static_configs:
-              - targets: [ "ecojoko-exporter.clouded.fr" ]
+              - targets: [ "ecojoko-exporter.monitoring.svc.cluster.local:3226" ]
             scrape_interval: 1s
             metric_relabel_configs:
               - source_labels: [ecojoko]
