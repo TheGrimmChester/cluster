@@ -3,7 +3,7 @@
 #NAME=plex IMAGE=csi-vol-613d147d-f50e-437b-a102-23ff9b29b954 ./mount_rbd.sh
 #NAME=home-assistant IMAGE=csi-vol-8d16312f-5717-4c49-9253-403ecc603c36 ./mount_rbd.sh
 #NAME=teslamate-grafana IMAGE=csi-vol-5468a1c6-ceab-46e2-8b02-36eb4ee3c4b5 ./mount_rbd.sh
-#NAME=mealie IMAGE=csi-vol-621f564d-170e-4c12-b40a-6959cafbd401 ./mount_rbd.sh
+#NAME=mealie IMAGE=csi-vol-a750e4c3-04aa-4ccd-865b-bbf17ff4a82d ./mount_rbd.sh
 #NAME=grocy IMAGE=csi-vol-0c7c9441-b74a-4151-a6cf-467b00ddb140 ./mount_rbd.sh
 #NAME=sickchill IMAGE=csi-vol-34b6003d-ed7b-4307-8175-8970d96e5d12 ./mount_rbd.sh
 #NAME=epic-free-games IMAGE=csi-vol-a7312366-e639-48c8-90ec-854c7268871b ./mount_rbd.sh
