@@ -14,3 +14,4 @@ resources:
   - ./registry/ks.yaml
   - ./registry-ui/ks.yaml
   - ./vaultwarden/ks.yaml
+  - ./mealie/ks.yaml
