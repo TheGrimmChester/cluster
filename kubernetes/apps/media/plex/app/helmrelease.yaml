@@ -100,19 +100,40 @@ spec:
     persistence:
       config:
         enabled: true
-        type: hostPath
-        hostPath: "/mnt/Apps/kube/volumes/plex"
-        mountPath: "/config"
+        type: nfs
+        server: "192.168.1.101"
+        path: /mnt/Apps/kube/volumes/plex
+        mountPath: /config
+        readOnly: false
       media:
         enabled: true
-        type: hostPath
-        hostPath: "/mnt/Entertainments"
-        mountPath: "/media/Entertainments"
+        type: nfs
+        server: "192.168.1.101"
+        path: /mnt/Entertainments
+        mountPath: /media/Entertainments
+        readOnly: false
       media-external:
         enabled: true
-        type: hostPath
-        hostPath: "/mnt/ntfs/Entertainment"
-        mountPath: "/media/external/Entertainments"
+        type: nfs
+        server: "192.168.1.101"
+        path: /mnt/ntfs/Entertainment
+        mountPath: /media/external/Entertainments
+        readOnly: false
+#      config:
+#        enabled: true
+#        type: hostPath
+#        hostPath: "/mnt/Apps/kube/volumes/plex"
+#        mountPath: "/config"
+#      media:
+#        enabled: true
+#        type: hostPath
+#        hostPath: "/mnt/Entertainments"
+#        mountPath: "/media/Entertainments"
+#      media-external:
+#        enabled: true
+#        type: hostPath
+#        hostPath: "/mnt/ntfs/Entertainment"
+#        mountPath: "/media/external/Entertainments"
 
       transcode:
         enabled: true
@@ -125,12 +146,12 @@ spec:
 
     nodeSelector:
       intel.feature.node.kubernetes.io/gpu: "true"
-      kubernetes.io/hostname: "truenas2012"
+#      kubernetes.io/hostname: "truenas2012"
     resources:
       requests:
         gpu.intel.com/i915: 1
-        cpu: 100m
-        memory: 1000Mi
+#        cpu: 100m
+#        memory: 1000Mi
       limits:
         gpu.intel.com/i915: 1
-        memory: 4000Mi
+#        memory: 4000Mi
