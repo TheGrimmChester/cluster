@@ -8,6 +8,7 @@ import sys
 import logging
 import os
 import random
+from datetime import date
 
 from prometheus_client import start_http_server, Gauge, Enum
 from prometheus_client import Counter
@@ -21,7 +22,9 @@ broker = os.environ.get("MQTT_HOST", None)
 port = os.environ.get("MQTT_PORT", 1883)
 mqtt_username = os.environ.get("MQTT_USERNAME", None)
 mqtt_password = os.environ.get("MQTT_PASSWORD", None)
-topic = "ecojoko/injection"
+ecojoko_consumption_topic = "ecojoko/consumption"
+ecojoko_injection_topic = "ecojoko/injection"
+ecojoko_daily_injection_topic = "ecojoko/daily_injection"
 client_id = f'ecojoko-{random.randint(0, 1000)}'
 
 FIRST_RECONNECT_DELAY = 1
@@ -86,7 +89,9 @@ def login_and_save_cookie(email, password):
         return None
 
 
-value = Gauge('ecojoko_injection', 'Ecojoko Injection')
+ecojoko_daily_injection_gauge = Gauge('ecojoko_daily_injection', 'Ecojoko Daily Injection')
+ecojoko_injection_gauge = Gauge('ecojoko_injection', 'Ecojoko Injection')
+ecojoko_consumption_gauge = Gauge('ecojoko_consumption', 'Ecojoko Consumption')
 error_count = Counter('ecojoko_injection_failures', 'Failures')
 
 cookies = login_and_save_cookie(username, password)
@@ -116,16 +121,26 @@ if __name__ == '__main__':
     start_http_server(server_port)
     while True:
         try:
-            response = json.loads(requests.get('https://service.ecojoko.com/gateway/' + gateway + '/device/' + device + '/realtime_conso', headers=headers, cookies=cookies).content.decode('UTF-8'))
-
-            ecojoko_injection = response['real_time']['value']
+            realtimeConsoResponse = requests.get('https://service.ecojoko.com/gateway/' + gateway + '/device/' + device + '/realtime_conso', headers=headers, cookies=cookies).content.decode('UTF-8')
+            print("Realtime conso " + realtimeConsoResponse)
+            realtimeConsoResponse = json.loads(realtimeConsoResponse)
+            ecojoko_injection = realtimeConsoResponse['real_time']['value']
 
             if ecojoko_injection > 0:
                 ecojoko_injection = 0
 
-            value.set(ecojoko_injection)
+            ecojoko_consumption_gauge.set(realtimeConsoResponse['real_time']['value'])
+            ecojoko_injection_gauge.set(-ecojoko_injection)
+
+            print("Fetching data for date " + date.today().strftime('%Y/%m/%d'))
+            powerstatResponse = requests.get('https://service.ecojoko.com/gateway/' + gateway + '/device/' + device + '/powerstat/d4/' + date.today().strftime('%Y/%m/%d'), headers=headers, cookies=cookies).content.decode('UTF-8')
+            print(powerstatResponse)
+            powerstatResponse = json.loads(powerstatResponse)
+            ecojoko_daily_injection_gauge.set(powerstatResponse['stat']['period']['kwh_prod'])
+
             if broker is not None:
-                client.publish(topic, ecojoko_injection)
+                client.publish(ecojoko_injection_topic, -ecojoko_injection)
+                client.publish(ecojoko_daily_injection_topic, powerstatResponse['stat']['period']['kwh_prod'])
 
             time.sleep(10)
         except Exception as e:
