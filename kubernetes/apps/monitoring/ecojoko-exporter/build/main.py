@@ -144,13 +144,13 @@ if __name__ == '__main__':
             powerstatResponse = requests.get('https://service.ecojoko.com/gateway/' + gateway + '/device/' + device + '/powerstat/d4/' + date.today().strftime('%Y-%m-%d'), headers=headers, cookies=cookies).content.decode('UTF-8')
             print(powerstatResponse)
             powerstatResponse = json.loads(powerstatResponse)
-            ecojoko_daily_injection_gauge.set(powerstatResponse['stat']['period']['kwh_prod'])
+            ecojoko_daily_injection_gauge.set(-powerstatResponse['stat']['period']['kwh_prod'])
 
             if broker is not None:
                 client.publish(ecojoko_injection_topic, -ecojoko_injection)
                 client.publish(ecojoko_consumption_topic, ecojoko_consumption)
                 client.publish(ecojoko_instant_topic, realtimeConsoResponse['real_time']['value'])
-                client.publish(ecojoko_daily_injection_topic, powerstatResponse['stat']['period']['kwh_prod'])
+                client.publish(ecojoko_daily_injection_topic, -powerstatResponse['stat']['period']['kwh_prod'])
 
             time.sleep(10)
         except Exception as e:
