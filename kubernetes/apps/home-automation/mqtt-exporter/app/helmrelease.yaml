@@ -1,0 +1,65 @@
+---
+# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/helmrelease_v2beta1.json
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mqtt-exporter
+  namespace: home-automation
+spec:
+  interval: 15m
+  chart:
+    spec:
+      chart: app-template
+      version: 1.5.1
+      sourceRef:
+        kind: HelmRepository
+        name: bjw-s
+        namespace: flux-system
+
+  maxHistory: 3
+  install:
+    createNamespace: true
+    remediation:
+      retries: 30
+  upgrade:
+    cleanupOnFail: true
+    remediation:
+      retries: 30
+  uninstall:
+    keepHistory: false
+  values:
+    controller:
+      type: statefulset
+      annotations:
+        reloader.stakater.com/auto: "true"
+
+    image:
+      repository: ghcr.io/kpetremann/mqtt-exporter
+      imagePullPolicy: IfNotPresent
+
+    envFrom:
+      - secretRef:
+          name: zigbee2mqtt-secret
+    env:
+      TZ: Europe/Paris
+      MQTT_ADDRESS, value: "emqx-headless.default.svc.cluster.local"
+      MQTT_V5_PROTOCOL, value: "True"
+      MQTT_CLIENT_ID, value: "mqtt_exporter"
+      PROMETHEUS_PORT, value: "8080"
+      MQTT_EXPOSE_CLIENT_ID, value: "False"
+
+    service:
+      main:
+        enabled: false
+
+    ingress:
+      main:
+        enabled: false
+
+    probes:
+      liveness:
+        enabled: false
+      readiness:
+        enabled: false
+      startup:
+        enabled: false
