@@ -152,7 +152,7 @@ if __name__ == '__main__':
                 client.publish(ecojoko_instant_topic, realtimeConsoResponse['real_time']['value'])
                 client.publish(ecojoko_daily_injection_topic, -powerstatResponse['stat']['period']['kwh_prod'])
 
-            time.sleep(10)
+            time.sleep(5)
         except Exception as e:
             print(e)
             sys.exit(1)
