@@ -24,6 +24,7 @@ mqtt_username = os.environ.get("MQTT_USERNAME", None)
 mqtt_password = os.environ.get("MQTT_PASSWORD", None)
 ecojoko_consumption_topic = "ecojoko/consumption"
 ecojoko_injection_topic = "ecojoko/injection"
+ecojoko_instant_topic = "ecojoko/instant"
 ecojoko_daily_injection_topic = "ecojoko/daily_injection"
 client_id = f'ecojoko-{random.randint(0, 1000)}'
 
@@ -50,6 +51,7 @@ def on_disconnect(client, userdata, rc):
         reconnect_delay = min(reconnect_delay, MAX_RECONNECT_DELAY)
         reconnect_count += 1
     logging.info("Reconnect failed after %s attempts. Exiting...", reconnect_count)
+    sys.exit(1)
 
 def connect_mqtt():
     def on_connect(client, userdata, flags, rc):
@@ -86,12 +88,13 @@ def login_and_save_cookie(email, password):
     else:
         print("La connexion a échoué. Vérifiez vos identifiants.")
         print(response.status_code)
-        return None
+        sys.exit(1)
 
 
 ecojoko_daily_injection_gauge = Gauge('ecojoko_daily_injection', 'Ecojoko Daily Injection')
 ecojoko_injection_gauge = Gauge('ecojoko_injection', 'Ecojoko Injection')
 ecojoko_consumption_gauge = Gauge('ecojoko_consumption', 'Ecojoko Consumption')
+ecojoko_instant_gauge = Gauge('ecojoko_instant', 'Ecojoko Instant')
 error_count = Counter('ecojoko_injection_failures', 'Failures')
 
 cookies = login_and_save_cookie(username, password)
@@ -125,11 +128,16 @@ if __name__ == '__main__':
             print("Realtime conso " + realtimeConsoResponse)
             realtimeConsoResponse = json.loads(realtimeConsoResponse)
             ecojoko_injection = realtimeConsoResponse['real_time']['value']
+            ecojoko_consumption = realtimeConsoResponse['real_time']['value']
 
             if ecojoko_injection > 0:
                 ecojoko_injection = 0
 
-            ecojoko_consumption_gauge.set(realtimeConsoResponse['real_time']['value'])
+            if ecojoko_consumption < 0:
+                ecojoko_consumption = 0
+
+            ecojoko_instant_gauge.set(realtimeConsoResponse['real_time']['value'])
+            ecojoko_consumption_gauge.set(ecojoko_consumption)
             ecojoko_injection_gauge.set(-ecojoko_injection)
 
             print("Fetching data for date " + date.today().strftime('%Y/%m/%d'))
@@ -140,8 +148,11 @@ if __name__ == '__main__':
 
             if broker is not None:
                 client.publish(ecojoko_injection_topic, -ecojoko_injection)
+                client.publish(ecojoko_consumption_topic, ecojoko_consumption)
+                client.publish(ecojoko_instant_topic, ecojoko_instant)
                 client.publish(ecojoko_daily_injection_topic, powerstatResponse['stat']['period']['kwh_prod'])
 
             time.sleep(10)
         except Exception as e:
-            sys.exit()
+            print(e)
+            sys.exit(1)
