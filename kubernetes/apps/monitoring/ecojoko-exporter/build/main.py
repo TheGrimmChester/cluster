@@ -140,8 +140,8 @@ if __name__ == '__main__':
             ecojoko_consumption_gauge.set(ecojoko_consumption)
             ecojoko_injection_gauge.set(-ecojoko_injection)
 
-            print("Fetching data for date " + date.today().strftime('%Y/%m/%d'))
-            powerstatResponse = requests.get('https://service.ecojoko.com/gateway/' + gateway + '/device/' + device + '/powerstat/d4/' + date.today().strftime('%Y/%m/%d'), headers=headers, cookies=cookies).content.decode('UTF-8')
+            print("Fetching data for date " + date.today().strftime('%Y-%m-%d'))
+            powerstatResponse = requests.get('https://service.ecojoko.com/gateway/' + gateway + '/device/' + device + '/powerstat/d4/' + date.today().strftime('%Y-%m-%d'), headers=headers, cookies=cookies).content.decode('UTF-8')
             print(powerstatResponse)
             powerstatResponse = json.loads(powerstatResponse)
             ecojoko_daily_injection_gauge.set(powerstatResponse['stat']['period']['kwh_prod'])
