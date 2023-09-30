@@ -39,7 +39,7 @@ spec:
         type: LoadBalancer
         #externalIPs: ["192.168.1.206"]
         loadBalancerIP: "192.168.1.206"
-        externalTrafficPolicy: Local
+#        externalTrafficPolicy: Local
         ports:
           http:
             port: &port 8096
