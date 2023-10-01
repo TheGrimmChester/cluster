@@ -42,6 +42,8 @@ spec:
       MQTT_CLIENT_ID: "mqtt_exporter"
       PROMETHEUS_PORT: "8080"
       MQTT_EXPOSE_CLIENT_ID: "False"
+      LOG_LEVEL: DEBUG
+      LOG_MQTT_MESSAGE: "True"
 
     service:
       main:
