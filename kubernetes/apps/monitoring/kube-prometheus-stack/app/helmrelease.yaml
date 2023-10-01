@@ -218,11 +218,6 @@ spec:
             scrape_interval: 1s
             static_configs:
               - targets: [ "mqtt-exporter.home-automation.svc.cluster.local:8080" ]
-            metric_relabel_configs:
-              - source_labels: [sensor]
-                regex: 'zigbee2mqtt_(.*)'
-                replacement: '$1'
-                target_label: sensor
 
           - job_name: tasmota-cumulus-etage-exporter
             static_configs:

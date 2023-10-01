@@ -44,6 +44,9 @@ spec:
       MQTT_EXPOSE_CLIENT_ID: "False"
       LOG_LEVEL: DEBUG
       LOG_MQTT_MESSAGE: "True"
+      MQTT_IGNORED_TOPICS: "homeassistant/#"
+      KEEP_FULL_TOPIC: "True"
+      MQTT_TOPIC: "solar/#"
 
     service:
       main:
