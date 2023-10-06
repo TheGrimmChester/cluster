@@ -103,11 +103,17 @@ spec:
         subPath: config.yml
         mountPath: /config/config.yml
         readOnly: true
+#
+#      recs:
+#        enabled: true
+#        type: hostPath
+#        hostPath: "/mnt/Services/camera/frigate"
+#        mountPath: "/media/frigate/recordings"
 
       recs:
         enabled: true
         type: hostPath
-        hostPath: "/mnt/Services/camera/frigate"
+        hostPath: "/mnt/ssd_4to/minio/cameras/frigate"
         mountPath: "/media/frigate/recordings"
 
       cache:
@@ -127,8 +133,8 @@ spec:
 #    nodeSelector:
 #      google.feature.node.kubernetes.io/coral: "true"
     nodeSelector:
-      intel.feature.node.kubernetes.io/gpu: "true"
-      kubernetes.io/hostname: "truenas2012"
+#      intel.feature.node.kubernetes.io/gpu: "true"
+      kubernetes.io/hostname: "vm-1"
 
     resources:
       requests:
