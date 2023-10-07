@@ -1,5 +1,0 @@
-"Name","Address","Endpoint","AllowedIPs","ListenPort","PersistentKeepalive","FwMark","PrivateKey","DNS","MTU","Table","PreUp","PostUp","PreDown","PostDown","SaveConfig"
-"bdx1","10.1.0.1/16","bdx1.clouded.fr","","51820","","","0ElRDpWxUwZjRbJMiXkspIZt/nTzoNPT2CW1ncd8BGQ=","","","","","","","",""
-"bdx2","10.2.0.1/16","bdx2.clouded.fr","","51820","","","gEK7VfyNM+AwHaaDl3Be4rS0wPWbvx/wbRwUZIXrlHQ=","","","","","","","",""
-"bdx3","10.3.0.1/16","bdx3.clouded.fr","","51820","","","uPF1CFvI7NrpKdOawXQeh1mKt4FAri577CgAh94bEF4=","","","","","","","",""
-"als1","10.4.0.1/16","als1.clouded.fr","","51820","","","iDBfDqMLZX5/9kKygBFZ/fcIl2yx9UsYYpaDaIqtp04=","","","","","","","",""
