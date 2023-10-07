@@ -72,7 +72,6 @@ spec:
         tls:
           - hosts:
               - *host
-            secretName: adguard-home-tls
     persistence:
       config:
         enabled: true
