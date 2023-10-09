@@ -23,6 +23,7 @@ includes:
   cluster: .taskfiles/ClusterTasks.yaml
   volsync: .taskfiles/VolSync/Tasks.yml
   kubernetes: .taskfiles/Kubernetes/Tasks.yml
+  flux: .taskfiles/Flux/Tasks.yml
 tasks:
 
   default: task -l
