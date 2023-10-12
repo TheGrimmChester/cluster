@@ -71,6 +71,7 @@ spec:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: "external"
+          external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
           nginx.ingress.kubernetes.io/whitelist-source-range: |
             10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
           hajimari.io/icon: mdi:car
@@ -139,8 +140,8 @@ spec:
     resources:
       requests:
         gpu.intel.com/i915: 1
-        cpu: 136m
-        memory: 1024Mi
+#        cpu: 136m
+#        memory: 1024Mi
       limits:
         gpu.intel.com/i915: 1
-        memory: 8192Mi
+#        memory: 8192Mi
