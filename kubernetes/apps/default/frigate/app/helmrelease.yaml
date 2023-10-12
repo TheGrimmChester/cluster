@@ -35,7 +35,8 @@ spec:
 
     env:
       TZ: "Europe/Paris"
-      LIBVA_DRIVER_NAME: i965
+      LIBVA_DRIVER_NAME: iHD
+#      LIBVA_DRIVER_NAME: i965
 
     envFrom:
       - secretRef:
