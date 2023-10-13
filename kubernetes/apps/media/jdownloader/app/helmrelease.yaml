@@ -148,31 +148,31 @@ spec:
       output:
         enabled: true
         type: hostPath
-        hostPath: "/mnt/Entertainments/Downloads"
+        hostPath: "/mnt/ssd_4to/Downloads"
         mountPath: "/output"
-
+#
 #      output:
 #        enabled: true
 #        mountPath: /output
 #        type: nfs
-#        server: "192.168.1.101"
-#        path: /mnt/Entertainments/Downloads
+#        server: "192.168.1.98"
+#        path: /mnt/ssd_4to/Downloads
 #        readOnly: false
 
     nodeSelector:
-#      node-role.kubernetes.io/worker: "true"
-      #intel.feature.node.kubernetes.io/gpu: "true"
-      kubernetes.io/hostname: "truenas2012"
+##      node-role.kubernetes.io/worker: "true"
+#      #intel.feature.node.kubernetes.io/gpu: "true"
+      kubernetes/.io/hostname: "vm-1"
 
-    affinity:
-      nodeAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          nodeSelectorTerms:
-            - matchExpressions:
-                - key: kubernetes.io/hostname
-                  operator: In
-                  values:
-                    - truenas2012
+#    affinity:
+#      nodeAffinity:
+#        requiredDuringSchedulingIgnoredDuringExecution:
+#          nodeSelectorTerms:
+#            - matchExpressions:
+#                - key: kubernetes.io/hostname
+#                  operator: In
+#                  values:
+#                    - truenas2012
 
 #    resources:
 #      requests:
