@@ -1,5 +1,4 @@
 ---
-# yaml-language-server: $schema=https://kubernetes-schemas.trux.dev/helmrelease_v2beta1.json
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -166,15 +165,15 @@ spec:
 #      #intel.feature.node.kubernetes.io/gpu: "true"
       kubernetes/.io/hostname: "vm-1"
 
-   affinity:
-     nodeAffinity:
-       requiredDuringSchedulingIgnoredDuringExecution:
-         nodeSelectorTerms:
-           - matchExpressions:
-               - key: kubernetes.io/hostname
-                 operator: In
-                 values:
-                   - vm-1
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+            - matchExpressions:
+                - key: kubernetes.io/hostname
+                  operator: In
+                  values:
+                    - vm-1
 
 #    resources:
 #      requests:
