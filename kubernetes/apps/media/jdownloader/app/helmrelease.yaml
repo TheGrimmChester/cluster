@@ -149,7 +149,7 @@ spec:
       output:
         enabled: true
         type: hostPath
-        hostPath: "/mnt/ssd_4to/Downloads"
+        hostPath: "/mnt/Entertainments/Downloads"
         mountPath: "/output"
 #
 #      output:
@@ -161,17 +161,17 @@ spec:
 #        readOnly: false
 
     nodeSelector:
-      kubernetes/.io/hostname: "vm-1"
+      kubernetes/.io/hostname: "truenas2012"
 
-    affinity:
-      nodeAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          nodeSelectorTerms:
-            - matchExpressions:
-                - key: kubernetes.io/hostname
-                  operator: In
-                  values:
-                    - vm-1
+    # affinity:
+    #   nodeAffinity:
+    #     requiredDuringSchedulingIgnoredDuringExecution:
+    #       nodeSelectorTerms:
+    #         - matchExpressions:
+    #             - key: kubernetes.io/hostname
+    #               operator: In
+    #               values:
+    #                 - vm-1
 
 #    resources:
 #      requests:
