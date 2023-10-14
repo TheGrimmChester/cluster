@@ -16,4 +16,4 @@ resources:
   - ./vaultwarden/ks.yaml
   - ./mealie/ks.yaml
   - ./mosquitto/ks.yaml
-  - ./changedetection/ks.yaml
+#  - ./changedetection/ks.yaml
