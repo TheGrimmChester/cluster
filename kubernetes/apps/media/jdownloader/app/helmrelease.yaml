@@ -166,15 +166,15 @@ spec:
 #      #intel.feature.node.kubernetes.io/gpu: "true"
       kubernetes/.io/hostname: "vm-1"
 
-#    affinity:
-#      nodeAffinity:
-#        requiredDuringSchedulingIgnoredDuringExecution:
-#          nodeSelectorTerms:
-#            - matchExpressions:
-#                - key: kubernetes.io/hostname
-#                  operator: In
-#                  values:
-#                    - truenas2012
+   affinity:
+     nodeAffinity:
+       requiredDuringSchedulingIgnoredDuringExecution:
+         nodeSelectorTerms:
+           - matchExpressions:
+               - key: kubernetes.io/hostname
+                 operator: In
+                 values:
+                   - vm-1
 
 #    resources:
 #      requests:
