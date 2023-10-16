@@ -1,5 +1,4 @@
 ---
-# yaml-language-server: $schema=https://kubernetes-schemas.devbu.io/helmrelease_v2beta1.json
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
@@ -94,9 +93,16 @@ spec:
     persistence:
       config:
         enabled: true
-        type: hostPath
-        hostPath: "/mnt/Apps/kube/volumes/jellyfin"
-        mountPath: "/config"
+        type: nfs
+        server: "192.168.1.98"
+        path: /mnt/ssd_4to/Apps/jellyfin
+        mountPath: /config
+        readOnly: false
+      # config:
+      #   enabled: true
+      #   type: hostPath
+      #   hostPath: "/mnt/Apps/kube/volumes/jellyfin"
+      #   mountPath: "/config"
       media:
         enabled: true
         type: nfs
