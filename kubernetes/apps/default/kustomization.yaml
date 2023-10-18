@@ -17,3 +17,4 @@ resources:
   - ./mealie/ks.yaml
   - ./mosquitto/ks.yaml
 #  - ./changedetection/ks.yaml
+  - ./photoprism/ks.yaml
