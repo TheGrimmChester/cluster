@@ -53,6 +53,7 @@ data:
             - "auth.${SECRET_DOMAIN}"
             - "grafana.${SECRET_DOMAIN}"
             - "authelia.security.svc.cluster.local"
+            - "auth.${SECRET_DOMAIN}"
 
           # No public access
         - policy: deny
