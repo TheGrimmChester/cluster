@@ -29,3 +29,4 @@ resources:
   - ./truecharts.yaml
   - ./vmware-tanzu-charts.yaml
   - ./k8s-at-home-charts.yaml
+  - ./kyverno.yaml
