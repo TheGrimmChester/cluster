@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
   - ./namespace.yaml
 #  - ./kubernetes-dashboard/ks.yaml
-  - ./kube-cleanup-operator/ks.yaml
   - ./thanos/ks.yaml
   - ./kube-prometheus-stack/ks.yaml
 #  - ./loki/ks.yaml
