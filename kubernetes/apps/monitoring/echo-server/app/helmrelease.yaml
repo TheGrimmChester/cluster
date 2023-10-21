@@ -72,16 +72,17 @@ spec:
         memory: 10Mi
       limits:
         memory: 50Mi
-    affinity:
-      podAntiAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-                - key: app.kubernetes.io/name
-                  operator: In
-                  values: [ "vm-1" ]
-            topologyKey: kubernetes.io/hostname
-#    nodeSelector:
+#    affinity:
+#      podAntiAffinity:
+#        requiredDuringSchedulingIgnoredDuringExecution:
+#          - labelSelector:
+#              matchExpressions:
+#                - key: app.kubernetes.io/name
+#                  operator: In
+#                  values: [ "vm-1" ]
+#            topologyKey: kubernetes.io/hostname
+    nodeSelector:
+      kubernetes.io/hostname: "vm-4"
 #      kubernetes.io/os: linux
 #      kubernetes.io/arch: amd64
 #      node-role.kubernetes.io/worker: "true"
