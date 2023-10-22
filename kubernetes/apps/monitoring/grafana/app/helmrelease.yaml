@@ -177,6 +177,17 @@ spec:
               sslmode: "disable"
               database: "teslamate"
               postgresVersion: '15'
+          - name: InfluxDB-MyElectricalData
+            type: influxdb
+            access: proxy
+            url: http://influxdb-influxdb2.monitoring.svc.cluster.local:80
+            jsonData:
+              version: Flux
+              organization: influxdata
+              defaultBucket: myelectricaldata
+              tlsSkipVerify: true
+            secureJsonData:
+              token: ${INFLUXDB_SECRET}
 
     dashboards:
       teslamate:
