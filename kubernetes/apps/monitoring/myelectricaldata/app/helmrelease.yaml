@@ -97,6 +97,6 @@ spec:
         storageClass: "ceph-block"
         accessMode: ReadWriteOnce
         size: 1Gi
-
-    nodeSelector:
-      kubernetes.io/hostname: "vm-1"
+#
+#    nodeSelector:
+#      kubernetes.io/hostname: "vm-1"
