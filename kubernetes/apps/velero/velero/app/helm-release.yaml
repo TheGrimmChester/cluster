@@ -15,22 +15,11 @@ spec:
         kind: HelmRepository
         name: vmware-tanzu-charts
         namespace: flux-system
-  maxHistory: 2
-  install:
-    remediation:
-      retries: 3
-  upgrade:
-    cleanupOnFail: true
-    remediation:
-      retries: 30
-  uninstall:
-    keepHistory: false
   values:
     image:
       repository: velero/velero
-      tag: v1.12.1
+      #tag: v1.12.0
     configuration:
-      snapshotVolumes: true
       extraEnvVars:
         TZ: "Europe/Paris"
       backupStorageLocation:
@@ -55,8 +44,6 @@ spec:
             publicUrl: https://s3.${SECRET_DOMAIN}
 
       resticTimeout: 4h
-      defaultVolumesToFsBackup: true
-      includeClusterResources: true
 
     initContainers:
       - name: velero-plugin-for-aws
@@ -71,16 +58,19 @@ spec:
       existingSecret: velero-secret
 
     schedules:
-#      daily-backup:
-#        # At 6:00am in the morning every day
-#        schedule: "0 6 * * *"
-#        template:
-#          ttl: "168h"
-      weekly-backup:
-        # At the end of the week on a Sunday morning, at 6:00am
-        schedule: "0 6 * * 0"
+      daily-backup:
+        schedule: "0 6 * * *"
         template:
-          ttl: "672h"
+          ttl: "168h"
+      plex-daily:
+        schedule: "0 7 * * *"
+        template:
+          labelSelector:
+            matchLabels:
+              app.kubernetes.io/name: plex
+          ttl: "120h"
+          includedNamespaces:
+            - media
 
     metrics:
       enabled: true
@@ -94,7 +84,7 @@ spec:
     kubectl:
       image:
         repository: ghcr.io/onedr0p/kubernetes-kubectl
-        tag: 1.28.2
+        tag: 1.28.3
 
     deployNodeAgent: true
 
