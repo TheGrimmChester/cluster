@@ -2,7 +2,7 @@ logger:
   default: info
 
 mqtt:
-  host: "192.168.1.205"
+  host: "mosquitto.default.svc.cluster.local"
   topic_prefix: frigate
   user: "{FRIGATE_MQTT_USER}"
   password: "{FRIGATE_MQTT_PASSWORD}"
