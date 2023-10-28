@@ -19,3 +19,4 @@ resources:
 #  - ./changedetection/ks.yaml
   - ./photoprism/ks.yaml
   - ./kubernetes-schemas/ks.yaml
+  - ./paperless/ks.yaml
