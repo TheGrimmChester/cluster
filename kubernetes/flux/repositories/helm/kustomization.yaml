@@ -32,3 +32,4 @@ resources:
   - ./kyverno.yaml
   - ./influxdata-charts.yaml
   - ./lwolf-charts.yaml
+  - ./runix.yaml
