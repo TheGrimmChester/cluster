@@ -60,3 +60,8 @@ tasks:
     cmd: ansible-playbook configure.yaml
     env:
       ANSIBLE_DISPLAY_SKIPPED_HOSTS: "false"
+
+  secrets:
+    desc: Generate secrets
+    dir: "."
+    cmd: ./scripts/write_sops.sh
