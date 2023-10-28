@@ -18,3 +18,4 @@ resources:
   - ./mosquitto/ks.yaml
 #  - ./changedetection/ks.yaml
   - ./photoprism/ks.yaml
+  - ./kubernetes-schemas/ks.yaml
