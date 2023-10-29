@@ -128,6 +128,9 @@ spec:
           enabled: true
           medium: "Memory"
           sizeLimit: 1Gi
+    nodeSelector:
+      intel.feature.node.kubernetes.io/gpu: "true"
+      kubernetes.io/hostname: "truenas2012"
 
     resources:
       requests:
