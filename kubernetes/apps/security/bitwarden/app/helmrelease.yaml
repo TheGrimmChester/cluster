@@ -75,8 +75,8 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app.kubernetes.io/instance: bitwarden-cli
-      app.kubernetes.io/name: bitwarden-cli
+      app.kubernetes.io/instance: bitwarden
+      app.kubernetes.io/name: bitwarden
   ingress:
     - from:
         - podSelector:
