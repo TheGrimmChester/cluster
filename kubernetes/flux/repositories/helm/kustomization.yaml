@@ -33,3 +33,4 @@ resources:
   - ./influxdata-charts.yaml
   - ./lwolf-charts.yaml
   - ./runix.yaml
+  - ./external-secrets.yaml
