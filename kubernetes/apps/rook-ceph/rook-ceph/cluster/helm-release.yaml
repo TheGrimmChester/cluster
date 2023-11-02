@@ -46,8 +46,8 @@ spec:
 
     cephClusterSpec:
       mon:
-        count: 2
-        allowMultiplePerNode: false
+        count: 1
+        allowMultiplePerNode: true
 #      dataDirHostPath: /var/lib/rook
       placement:
         all:
@@ -59,7 +59,7 @@ spec:
                       operator: In
                       values:
                         - vm-1
-                        - vm-2
+#                        - vm-2
 
       # cephVersion:
       # image: quay.io/ceph/ceph:v17.2.0
@@ -134,9 +134,9 @@ spec:
             devices:
 #              - name: "/dev/mapper/ubuntu--vg-rook--ceph"
               - name: "/dev/sdb"
-          - name: "vm-2"
-            devices:
-              - name: "/dev/sdb"
+#          - name: "vm-2"
+#            devices:
+#              - name: "/dev/sdb"
 
 #          - name: "truenas2012"
 #            devices:
