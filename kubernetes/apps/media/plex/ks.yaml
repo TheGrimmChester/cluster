@@ -9,7 +9,7 @@ spec:
   dependsOn:
     - name: cluster-apps-intel-device-plugin-gpu
 
-  path: ./kubernetes/apps/media/plex/app
+  path: ./kubernetes/apps/media/plex/app_nas
   prune: true
   sourceRef:
     kind: GitRepository
