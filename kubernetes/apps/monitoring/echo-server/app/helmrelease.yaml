@@ -82,7 +82,7 @@ spec:
 #                  values: [ "vm-1" ]
 #            topologyKey: kubernetes.io/hostname
     nodeSelector:
-      kubernetes.io/hostname: "vm-4"
+      kubernetes.io/hostname: "vm-3"
 #      kubernetes.io/os: linux
 #      kubernetes.io/arch: amd64
 #      node-role.kubernetes.io/worker: "true"
