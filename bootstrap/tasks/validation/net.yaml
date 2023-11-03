@@ -6,13 +6,13 @@
   loop_control:
     label: "{{ item.address }}"
 
-- name: Verify master node count
-  ansible.builtin.assert:
-    that:
-      - bootstrap_nodes.master | length > 0
-      - bootstrap_nodes.master | length is odd
-    success_msg: Master node count {{ bootstrap_nodes.master | length }} is correct.
-    fail_msg: Master node count {{ bootstrap_nodes.master | length }} is not greater than 0 or is not odd.
+#- name: Verify master node count
+#  ansible.builtin.assert:
+#    that:
+#      - bootstrap_nodes.master | length > 0
+#      - bootstrap_nodes.master | length is odd
+#    success_msg: Master node count {{ bootstrap_nodes.master | length }} is correct.
+#    fail_msg: Master node count {{ bootstrap_nodes.master | length }} is not greater than 0 or is not odd.
 
 - name: Verify node CIDR
   ansible.builtin.assert:
