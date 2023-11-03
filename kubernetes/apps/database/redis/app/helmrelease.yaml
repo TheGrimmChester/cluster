@@ -46,7 +46,7 @@ spec:
                     operator: In
                     values:
                       - vm-1
-                      - vm-2
+                      - truenas2012
 
     sentinel:
       enabled: true
@@ -82,4 +82,4 @@ spec:
                   operator: In
                   values:
                     - vm-1
-                    - vm-2
+                    - truenas2012

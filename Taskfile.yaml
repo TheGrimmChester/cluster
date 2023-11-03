@@ -24,6 +24,7 @@ includes:
   volsync: .taskfiles/VolSync/Tasks.yml
   kubernetes: .taskfiles/Kubernetes/Tasks.yml
   flux: .taskfiles/Flux/Tasks.yml
+  rook: .taskfiles/Rook/Tasks.yml
 tasks:
 
   default: task -l

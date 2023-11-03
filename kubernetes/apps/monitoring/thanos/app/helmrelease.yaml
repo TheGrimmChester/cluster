@@ -36,7 +36,7 @@ spec:
                   operator: In
                   values:
                     - vm-1
-                    - vm-2
+                    - truenas2012
 
     image:
       registry: quay.io
@@ -93,7 +93,7 @@ spec:
                     operator: In
                     values:
                       - vm-1
-                      - vm-2
+                      - truenas2012
 
       enabled: true
       extraFlags:
@@ -127,7 +127,7 @@ spec:
                     operator: In
                     values:
                       - vm-1
-                      - vm-2
+                      - truenas2012
 
       enabled: true
 #      resources:

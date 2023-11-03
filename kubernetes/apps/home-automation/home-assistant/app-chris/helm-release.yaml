@@ -177,4 +177,4 @@ spec:
           - name: config
             mountPath: /config
     nodeSelector:
-      kubernetes.io/hostname: "vm-2"
+      kubernetes.io/hostname: "truenas2012"

@@ -411,7 +411,7 @@ spec:
                     operator: In
                     values:
                       - vm-1
-                      - vm-2
+                      - truenas2012
 
       enabled: true
       replicas: 1
@@ -431,7 +431,7 @@ spec:
                   operator: In
                   values:
                     - vm-1
-                    - vm-2
+                    - truenas2012
 
 #    topologySpreadConstraints:
 #      - maxSkew: 1

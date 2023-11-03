@@ -47,7 +47,7 @@ spec:
     cephClusterSpec:
       mon:
         count: 1
-        allowMultiplePerNode: true
+        allowMultiplePerNode: false
 #      dataDirHostPath: /var/lib/rook
       placement:
         all:
@@ -133,13 +133,13 @@ spec:
           - name: "vm-1"
             devices:
 #              - name: "/dev/mapper/ubuntu--vg-rook--ceph"
-              - name: "/dev/sdb"
+              - name: "/dev/disk/by-id/scsi-SRealtek_RTL9210_NVME_0000000000000000"
 
           - name: "truenas2012"
             devices:
               - name: "/dev/disk/by-id/usb-Realtek_RTL9210_NVME_012345678904-0:0"
 
-#          - name: "vm-2"
+#          - name: "truenas2012"
 #            devices:
 #              - name: "/dev/sdb"
 

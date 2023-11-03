@@ -41,7 +41,7 @@ spec:
                     operator: In
                     values:
                       - vm-1
-                      - vm-2
+                      - truenas2012
 
     grafana:
       enabled: false
@@ -61,7 +61,7 @@ spec:
                     operator: In
                     values:
                       - vm-1
-                      - vm-2
+                      - truenas2012
 
       metricLabelsAllowlist:
         - "pods=[*]"
@@ -475,12 +475,12 @@ spec:
                   operator: In
                   values:
                     - vm-1
-                    - vm-2
+                    - truenas2012
 #      podAffinity:
 #        requiredDuringSchedulingIgnoredDuringExecution:
 #          - labelSelector:
 #              matchExpressions:
 #                - key: app.kubernetes.io/name
 #                  operator: In
-#                  values: [ "vm-1", "vm-2" ]
+#                  values: [ "vm-1", "truenas2012" ]
 #            topologyKey: kubernetes.io/hostname
