@@ -21,12 +21,12 @@ spec:
       repository: vaultwarden/server
       tag: 1.29.2
 
-    initContainers:
-      init-db:
-        image: ghcr.io/onedr0p/postgres-initdb:14.8
-        envFrom:
-          - secretRef:
-              name: vaultwarden-secret
+#    initContainers:
+#      init-db:
+#        image: ghcr.io/onedr0p/postgres-initdb:14.8
+#        envFrom:
+#          - secretRef:
+#              name: vaultwarden-secret
 
     env:
       DATA_FOLDER: "config"

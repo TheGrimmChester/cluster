@@ -46,7 +46,7 @@ spec:
 
     cephClusterSpec:
       mon:
-        count: 2
+        count: 1
         allowMultiplePerNode: false
 #      dataDirHostPath: /var/lib/rook
       placement:
@@ -58,7 +58,7 @@ spec:
                     - key: kubernetes.io/hostname
                       operator: In
                       values:
-#                        - vm-1
+                        - vm-1
                         - truenas2012
 
       # cephVersion:

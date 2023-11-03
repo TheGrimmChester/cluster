@@ -15,7 +15,7 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-#                  - vm-1
+                  - vm-1
                   - truenas2012
 
   instances: 1

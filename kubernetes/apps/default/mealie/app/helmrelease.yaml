@@ -27,12 +27,12 @@ spec:
         namespace: flux-system
 
   values:
-    initContainers:
-      init-db:
-        image: ghcr.io/onedr0p/postgres-initdb:14.8
-        envFrom:
-          - secretRef:
-              name: mealie-secret
+#    initContainers:
+#      init-db:
+#        image: ghcr.io/onedr0p/postgres-initdb:14.8
+#        envFrom:
+#          - secretRef:
+#              name: mealie-secret
     image:
       repository: docker.io/hkotel/mealie
       tag: frontend-nightly

@@ -28,13 +28,13 @@ spec:
     keepHistory: false
   values:
     interval: 10m
-    initContainers:
-      01-init-db:
-        image: ghcr.io/onedr0p/postgres-initdb:14.8
-        imagePullPolicy: IfNotPresent
-        envFrom:
-          - secretRef:
-              name: authelia-secret
+#    initContainers:
+#      01-init-db:
+#        image: ghcr.io/onedr0p/postgres-initdb:14.8
+#        imagePullPolicy: IfNotPresent
+#        envFrom:
+#          - secretRef:
+#              name: authelia-secret
     controller:
       replicas: 1
       strategy: Recreate
