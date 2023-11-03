@@ -15,7 +15,7 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                  - vm-1
+#                  - vm-1
                   - truenas2012
 
   instances: 1
@@ -31,7 +31,7 @@ spec:
 
     pg_hba:
       - host all all all scram-sha-256
-      - host  all   all  127.0.0.1/32  trust
+#      - host  all   all  127.0.0.1/32  trust
 
   logLevel: debug
   monitoring:
