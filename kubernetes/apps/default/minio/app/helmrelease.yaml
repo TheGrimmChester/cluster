@@ -131,7 +131,7 @@ spec:
       config:
         enabled: true
         type: hostPath
-        hostPath: "/mnt/ssd_4to/minio"
+        hostPath: "/mnt/Backup/restore/minio"
         mountPath: "/data"
 
     resources:
@@ -141,4 +141,4 @@ spec:
       limits:
         memory: 750Mi
     nodeSelector:
-      kubernetes.io/hostname: "vm-1"
+      kubernetes.io/hostname: "truenas2012"
