@@ -34,3 +34,4 @@ resources:
   - ./lwolf-charts.yaml
   - ./runix.yaml
   - ./external-secrets.yaml
+  - ./descheduler.yaml

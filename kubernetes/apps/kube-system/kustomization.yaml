@@ -13,3 +13,4 @@ resources:
   - ./volsync/ks.yaml
   - ./snapshot-controller/ks.yaml
   - ./kube-cleanup-operator/ks.yaml
+  - ./descheduler/ks.yaml
