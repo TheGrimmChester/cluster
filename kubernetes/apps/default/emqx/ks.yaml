@@ -11,7 +11,7 @@
 #  dependsOn:
 #
 ##    - name: cluster-apps-nginx-external
-#    - name: cluster-apps-rook-ceph-cluster
+#    #- name: cluster-apps-rook-ceph-cluster
 #    - name: cluster-apps-volsync
 #  path: './kubernetes/apps/default/emqx/app/'
 #  prune: true
@@ -39,7 +39,7 @@ spec:
   dependsOn:
 
 #    - name: cluster-apps-nginx-external
-    - name: cluster-apps-rook-ceph-cluster
+    #- name: cluster-apps-rook-ceph-cluster
     - name: cluster-apps-volsync
   path: './kubernetes/apps/default/emqx/app-c/'
   prune: true

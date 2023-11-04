@@ -144,7 +144,7 @@ spec:
         enabled: true
         mountPath: /config
         size: 1Gi
-        storageClass: ceph-block
+        storageClass: local-path
         accessMode: ReadWriteOnce
       output:
         enabled: true

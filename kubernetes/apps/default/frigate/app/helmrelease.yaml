@@ -94,7 +94,7 @@ spec:
         mountPath: /data
         accessMode: ReadWriteOnce
         size: 10Gi
-        storageClass: ceph-block
+        storageClass: local-path
     #https://github.com/Diaoul/home-ops/blob/main/cluster/apps/home-automation/frigate/helmrelease.yaml
 
     persistence:

@@ -421,7 +421,7 @@ spec:
         enabled: true
     persistence:
       enabled: true
-      storageClassName: ceph-block
+      storageClassName: local-path
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:

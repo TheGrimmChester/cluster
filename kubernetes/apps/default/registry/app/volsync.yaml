@@ -14,7 +14,7 @@ spec:
     repository: registry-restic-secret
     cacheCapacity: 2Gi
     volumeSnapshotClassName: csi-ceph-blockpool
-    storageClassName: ceph-block
+    storageClassName: local-path
     moverSecurityContext:
       runAsUser: 568
       runAsGroup: 568

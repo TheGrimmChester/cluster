@@ -56,7 +56,7 @@ spec:
       enabled: false
     persistentVolume:
       enabled: true
-      storageClass: ceph-block
+      storageClass: local-path
       accessModes:
         - ReadWriteOnce
       size: 200Mi
