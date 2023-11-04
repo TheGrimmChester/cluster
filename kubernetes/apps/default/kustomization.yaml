@@ -10,13 +10,13 @@ resources:
   - ./teslamate/ks.yaml
   - ./abrp/ks.yaml
   - ./theme-park/ks.yaml
-  - ./frigate/ks.yaml
+#  - ./frigate/ks.yaml
   - ./registry/ks.yaml
   - ./registry-ui/ks.yaml
   - ./vaultwarden/ks.yaml
   - ./mealie/ks.yaml
   - ./mosquitto/ks.yaml
 #  - ./changedetection/ks.yaml
-  - ./photoprism/ks.yaml
+#  - ./photoprism/ks.yaml
   - ./kubernetes-schemas/ks.yaml
-  - ./paperless/ks.yaml
+#  - ./paperless/ks.yaml

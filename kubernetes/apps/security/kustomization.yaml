@@ -5,5 +5,5 @@ resources:
   - namespace.yaml
   - glauth/ks.yaml
   - authelia/ks.yaml
-  - external-secrets/ks.yaml
-  - bitwarden/ks.yaml
+#  - external-secrets/ks.yaml
+#  - bitwarden/ks.yaml
