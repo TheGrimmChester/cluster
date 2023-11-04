@@ -2,8 +2,8 @@
 apiVersion: volsync.backube/v1alpha1
 kind: ReplicationSource
 metadata:
-  name: home-assistant
-  namespace: home-automation
+  name: registry
+  namespace: default
 spec:
   sourcePVC: registry-datastore
   trigger:
