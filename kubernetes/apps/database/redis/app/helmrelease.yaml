@@ -36,7 +36,7 @@ spec:
     replica:
       persistence:
         enabled: false
-      replicaCount: 2
+      replicaCount: 1
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:

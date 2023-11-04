@@ -46,7 +46,7 @@ spec:
       type: s3
     query:
       enabled: true
-      replicaCount: 2
+      replicaCount: 1
       podAntiAffinityPreset: hard
       replicaLabels:
         - replica
@@ -77,13 +77,13 @@ spec:
 #          memory: 99M
     queryFrontend:
       enabled: true
-      replicaCount: 2
+      replicaCount: 1
     bucketweb:
       enabled: true
       refresh: "10m"
-      replicaCount: 2
+      replicaCount: 1
     compactor:
-      replicaCount: 2
+      replicaCount: 1
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -117,7 +117,7 @@ spec:
         storageClass: "ceph-block"
         size: 15Gi
     storegateway:
-      replicaCount: 2
+      replicaCount: 1
       affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
