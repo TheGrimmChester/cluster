@@ -5,6 +5,7 @@
 
 k3s_control_node: true
 k3s_server:
+  datastore-endpoint: mysql://Xorix:pFy5j-9aFYfJKZAp@tcp(lb-fra-01.clouded.fr:3306)/k8s
 {% if bootstrap_ipv6_enabled | default(false) %}
   node-ip: "{% raw %}{{ ansible_host }},{{ ansible_default_ipv6.address }}{% endraw %}"
 {% else %}
@@ -12,6 +13,7 @@ k3s_server:
 {% endif %}
   tls-san:
     - "{% raw %}{{ kube_vip_addr }}{% endraw %}"
+    - "lb-fra-01.clouded.fr"
   docker: false
   flannel-backend: "none"             # This needs to be in quotes
   disable:

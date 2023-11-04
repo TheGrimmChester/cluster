@@ -88,5 +88,5 @@ spec:
                 - key: kubernetes.io/hostname
                   operator: In
                   values:
-                    - vm-1
+                    - truenas2012
                     - truenas2012
