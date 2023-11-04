@@ -58,7 +58,7 @@ spec:
                     - key: kubernetes.io/hostname
                       operator: In
                       values:
-#                        - vm-1
+#                        - truenas2012
                         - truenas2012
 
       # cephVersion:
@@ -130,7 +130,7 @@ spec:
         config:
           osdsPerDevice: "1"
         nodes:
-#          - name: "vm-1"
+#          - name: "truenas2012"
 #            devices:
 ##              - name: "/dev/mapper/ubuntu--vg-rook--ceph"
 #              - name: "/dev/disk/by-id/scsi-SRealtek_RTL9210_NVME_0000000000000000"
