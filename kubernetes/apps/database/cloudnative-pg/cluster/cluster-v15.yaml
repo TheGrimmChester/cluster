@@ -15,10 +15,10 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                  - vm-1
                   - truenas2012
+                  - vm-1
 
-  instances: 1
+  instances: 2
   imageName: ghcr.io/cloudnative-pg/postgresql:15.3
   primaryUpdateStrategy: unsupervised
   storage:
