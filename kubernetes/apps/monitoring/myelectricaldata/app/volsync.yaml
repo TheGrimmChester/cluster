@@ -26,7 +26,7 @@ spec:
     pruneIntervalDays: 14
     repository: myelectricaldata-restic-secret
     cacheCapacity: 2Gi
-    volumeSnapshotClassName: csi-ceph-blockpool
+    volumeSnapshotClassName: csi-hostpath-snapclass
     storageClassName: local-path
     moverSecurityContext:
       runAsUser: 568

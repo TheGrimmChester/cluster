@@ -27,7 +27,7 @@ spec:
       retries: 5
   values:
     volumeSnapshotClasses:
-      - name: csi-ceph-blockpool
+      - name: csi-hostpath-snapclass
         driver: rook-ceph.rbd.csi.ceph.com
         annotations:
           snapshot.storage.kubernetes.io/is-default-class: "true"
