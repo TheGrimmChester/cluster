@@ -83,7 +83,7 @@ metadata:
   name: registry-datastore
   namespace: default
 spec:
-  storageClassName: local-path
+  storageClassName: ceph-block
   accessModes:
     - ReadWriteOnce
   resources:

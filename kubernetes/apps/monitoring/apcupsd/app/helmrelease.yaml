@@ -79,7 +79,7 @@ spec:
         mountPath: /etc/apcupsd
         accessMode: ReadWriteOnce
         size: 1Gi
-        storageClass: local-path
+        storageClass: ceph-block
 
     persistence:
       apcupsd-dbus:

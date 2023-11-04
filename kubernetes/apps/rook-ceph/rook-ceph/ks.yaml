@@ -53,7 +53,7 @@ spec:
     kind: GitRepository
     name: home-kubernetes
   dependsOn:
-    #- name: cluster-apps-rook-ceph-cluster
+    - name: cluster-apps-rook-ceph-cluster
   healthChecks:
     - apiVersion: apps/v1
       kind: Deployment

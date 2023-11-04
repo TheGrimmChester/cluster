@@ -106,7 +106,7 @@ spec:
 #    persistence:
 #      config:
 #        enabled: true
-#        storageClass: local-path
+#        storageClass: ceph-block
 #        accessMode: ReadWriteOnce
 #        size: "5Gi"
     volumeClaimTemplates:
@@ -114,7 +114,7 @@ spec:
         mountPath: /config
         accessMode: ReadWriteOnce
         size: 5Gi
-        storageClass: local-path
+        storageClass: ceph-block
 
     persistence:
       hass-dbus:

@@ -77,5 +77,5 @@ spec:
         enabled: true
         mountPath: /opt/adguardhome/conf
         size: 50Mi
-        storageClass: local-path
+        storageClass: ceph-block
         accessMode: ReadWriteOnce

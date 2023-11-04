@@ -8,7 +8,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-nginx-external
-    #- name: cluster-apps-rook-ceph-cluster
+    - name: cluster-apps-rook-ceph-cluster
     - name: cluster-apps-volsync
     - name: cluster-apps-cloudnative-pg
   path: ./kubernetes/apps/home-automation/home-assistant/app
@@ -36,7 +36,7 @@ spec:
   dependsOn:
 
     - name: cluster-apps-nginx-external
-    #- name: cluster-apps-rook-ceph-cluster
+    - name: cluster-apps-rook-ceph-cluster
     - name: cluster-apps-volsync
     - name: cluster-apps-cloudnative-pg
   path: ./kubernetes/apps/home-automation/home-assistant/app-chris

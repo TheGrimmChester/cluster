@@ -90,7 +90,7 @@ spec:
 #        mountPath: /data
 #        accessMode: ReadWriteOnce
 #        size: 1Gi
-#        storageClass: local-path
+#        storageClass: ceph-block
     persistence:
       data:
         enabled: true

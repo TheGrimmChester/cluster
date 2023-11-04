@@ -59,7 +59,7 @@ spec:
         mountPath: /var/lib/influxdb2
         accessMode: ReadWriteMany
         size: 50i
-        storageClass: local-path
+        storageClass: ceph-block
 #
 #    persistence:
 #      enabled: true

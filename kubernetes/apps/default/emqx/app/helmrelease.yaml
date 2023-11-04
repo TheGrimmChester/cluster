@@ -75,7 +75,7 @@ spec:
       enabled: false
     persistence:
       enabled: true
-      storageClass: local-path
+      storageClass: ceph-block
       size: 1Gi
 #    affinity:
 #      podAntiAffinity:

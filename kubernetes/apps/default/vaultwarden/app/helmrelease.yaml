@@ -85,7 +85,7 @@ spec:
         enabled: true
         mountPath: /config
         size: 1Gi
-        storageClass: local-path
+        storageClass: ceph-block
         accessMode: ReadWriteOnce
     affinity:
       nodeAffinity:

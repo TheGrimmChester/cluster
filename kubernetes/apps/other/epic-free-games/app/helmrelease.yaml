@@ -79,7 +79,7 @@ spec:
         mountPath: /usr/app/config
         accessMode: ReadWriteOnce
         size: 10Mi
-        storageClass: local-path
+        storageClass: ceph-block
     affinity:
       nodeAffinity:
         requiredDuringSchedulingIgnoredDuringExecution:

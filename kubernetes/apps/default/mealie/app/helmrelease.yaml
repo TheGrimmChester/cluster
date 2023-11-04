@@ -91,7 +91,7 @@ spec:
         enabled: true
         mountPath: /app/data/
         size: 1Gi
-        storageClass: local-path
+        storageClass: ceph-block
         accessMode: ReadWriteOnce
 
     ingress:

@@ -86,7 +86,7 @@ spec:
 #        mountPath: /photoprism
 #        accessMode: ReadWriteOnce
 #        size: 1Gi
-#        storageClass: local-path
+#        storageClass: ceph-block
 
     persistence:
       config:
