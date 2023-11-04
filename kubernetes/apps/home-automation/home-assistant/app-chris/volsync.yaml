@@ -26,7 +26,7 @@ spec:
     pruneIntervalDays: 14
     repository: home-assistant-chris-restic-secret
     cacheCapacity: 2Gi
-    volumeSnapshotClassName: csi-hostpath-snapclass
+    volumeSnapshotClassName: csi-ceph-blockpool
     storageClassName: local-path
     moverSecurityContext:
       runAsUser: 568

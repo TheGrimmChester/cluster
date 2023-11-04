@@ -14,7 +14,7 @@ spec:
     pruneIntervalDays: 10
     repository: mealie-restic-secret
     cacheCapacity: 2Gi
-    volumeSnapshotClassName: csi-hostpath-snapclass
+    volumeSnapshotClassName: csi-ceph-blockpool
     storageClassName: local-path
     moverSecurityContext:
       runAsUser: 568
