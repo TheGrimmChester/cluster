@@ -38,6 +38,7 @@ data:
             - '185.39.140.119'
             - '82.66.187.107'
             - '2a03:d604:200:8700:b656:8ec0:85fe:9f80'
+            - '2a01:e0a:bc2:a410:8787:873b:5ab0:c710'
       default_policy: deny
       rules:
         # Disable Authelia for local network
@@ -69,6 +70,8 @@ data:
           domain:
             - "teslamate-grafana.${SECRET_DOMAIN}"
             - "teslamate.${SECRET_DOMAIN}"
+            - "frigate.${SECRET_DOMAIN}"
+            - "zigbee2mqtt.${SECRET_DOMAIN}"
 
           # Applications without auth but low security requirements
         - policy: one_factor

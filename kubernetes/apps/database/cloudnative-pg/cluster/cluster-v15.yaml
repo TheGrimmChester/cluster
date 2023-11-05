@@ -16,9 +16,9 @@ spec:
                 operator: In
                 values:
                   - truenas2012
-                  - vm-1
+#                  - vm-1
 
-  instances: 2
+  instances: 1
   imageName: ghcr.io/cloudnative-pg/postgresql:15.3
   primaryUpdateStrategy: unsupervised
   storage:
