@@ -27,8 +27,9 @@ spec:
     keepHistory: false
   values:
     controller:
-      replicas: 1
-      strategy: RollingUpdate
+      type: statefulset
+      annotations:
+        reloader.stakater.com/auto: "true"
     image:
       repository: public.ecr.aws/docker/library/registry
       tag: 2.8.3
