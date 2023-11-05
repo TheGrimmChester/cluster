@@ -31,14 +31,14 @@ spec:
         type: statefulset
         annotations:
           reloader.stakater.com/auto: "true"
-        initContainers:
-          init-db:
-            image:
-              repository: ghcr.io/haraldkoch/postgres-init
-              tag: 15.4@sha256:3cf3da8b51b6804493f2adbc1f8d49fee9764c5159b84014a4c0618da094ebe2
-            envFrom: &envFrom
-              - secretRef:
-                  name: paperless-secret
+#        initContainers:
+#          init-db:
+#            image:
+#              repository: ghcr.io/haraldkoch/postgres-init
+#              tag: 15.4@sha256:3cf3da8b51b6804493f2adbc1f8d49fee9764c5159b84014a4c0618da094ebe2
+#            envFrom: &envFrom
+#              - secretRef:
+#                  name: paperless-secret
         containers:
           main:
             image:
@@ -65,7 +65,9 @@ spec:
               PAPERLESS_URL: https://paperless.${SECRET_DOMAIN}
               USERMAP_UID: 568
               USERMAP_GID: 568
-            envFrom: *envFrom
+            envFrom:
+              - secretRef:
+                name: paperless-secret
             resources:
               requests:
                 cpu: 100m
