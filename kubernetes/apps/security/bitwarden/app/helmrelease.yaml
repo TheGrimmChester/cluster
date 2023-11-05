@@ -33,7 +33,7 @@ spec:
         containers:
           main:
             image:
-              repository: "registry.${SECRET_DOMAIN}/bw-cli"
+              repository: "thegrimmchester/bw-cli"
               tag: latest@sha256:74f951f4d62128dc07a3d20f9c78deed804f0e05d1deca37c02d2a6f50e68f0a
               pullPolicy: IfNotPresent
             env:

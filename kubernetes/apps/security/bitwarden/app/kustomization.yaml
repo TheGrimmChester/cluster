@@ -6,4 +6,3 @@ namespace: security
 resources:
   - ./secrets.sops.yaml
   - ./helmrelease.yaml
-  - ./externalsecret.yaml
