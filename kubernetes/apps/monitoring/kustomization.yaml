@@ -8,7 +8,7 @@ resources:
   - ./kube-prometheus-stack/ks.yaml
 #  - ./loki/ks.yaml
   - ./grafana/ks.yaml
-#  - ./echo-server/ks.yaml
+  - ./echo-server/ks.yaml
 #  - ./librespeed/ks.yaml
   - ./apcupsd/ks.yaml
   - ./apcupsd-exporter/ks.yaml
