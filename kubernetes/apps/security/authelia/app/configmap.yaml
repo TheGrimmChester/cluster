@@ -72,6 +72,7 @@ data:
             - "teslamate.${SECRET_DOMAIN}"
             - "frigate.${SECRET_DOMAIN}"
             - "zigbee2mqtt.${SECRET_DOMAIN}"
+            - "myelectricaldata.${SECRET_DOMAIN}"
 
           # Applications without auth but low security requirements
         - policy: one_factor
