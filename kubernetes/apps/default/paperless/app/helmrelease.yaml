@@ -67,7 +67,7 @@ spec:
               USERMAP_GID: 568
             envFrom:
               - secretRef:
-                name: paperless-secret
+                  name: paperless-secret
             resources:
               requests:
                 cpu: 100m
@@ -99,6 +99,7 @@ spec:
         className: external
         annotations:
           hajimari.io/icon: mdi:file-multiple
+          external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
           nginx.ingress.kubernetes.io/auth-method: GET
           nginx.ingress.kubernetes.io/auth-url: http://authelia.security.svc.cluster.local/api/verify
           nginx.ingress.kubernetes.io/auth-signin: https://auth.${SECRET_DOMAIN}/rm=$request_method
