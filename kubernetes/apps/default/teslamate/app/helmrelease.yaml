@@ -45,7 +45,7 @@ spec:
 #              name: teslamate-secret
     image:
       repository: teslamate/teslamate
-      tag: 1.28.1@sha256:71c00252d21d03154453adaa9d528f92135e7610055a6b0d0562858852810c2f
+      tag: 1.28.2@sha256:347aa9d7bc5126cde0456979569d432dd38242579445054a5bde3f70540ba1ce
     env:
       TZ: "Europe/Paris"
       DISABLE_MQTT: "false"
