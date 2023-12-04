@@ -17,6 +17,6 @@ resources:
   - ./mealie/ks.yaml
   - ./mosquitto/ks.yaml
 #  - ./changedetection/ks.yaml
-#  - ./photoprism/ks.yaml
+  - ./photoprism/ks.yaml
   - ./kubernetes-schemas/ks.yaml
   - ./paperless/ks.yaml
