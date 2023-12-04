@@ -148,5 +148,5 @@ spec:
           - hosts:
               - photos.${SECRET_DOMAIN}
 
-#    nodeSelector:
-#      kubernetes.io/hostname: "truenas2012"
+    nodeSelector:
+      kubernetes.io/hostname: "truenas2012"
