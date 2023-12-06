@@ -14,3 +14,4 @@ resources:
   - ./snapshot-controller/ks.yaml
   - ./kube-cleanup-operator/ks.yaml
   - ./descheduler/ks.yaml
+  - ./system-upgrade-controller/ks.yaml
