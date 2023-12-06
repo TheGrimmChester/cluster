@@ -3,9 +3,9 @@ kubernetes:
   children:
     master:
       hosts:
-        vm-1:
-          ansible_host: 192.168.1.98
-    worker:
-      hosts:
         truenas2012:
           ansible_host: 192.168.1.101
+    worker:
+      hosts:
+        vm-1:
+          ansible_host: 192.168.1.98
