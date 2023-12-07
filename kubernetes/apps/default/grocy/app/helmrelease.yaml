@@ -46,6 +46,7 @@ spec:
         enabled: true
         ingressClassName: "external"
         annotations:
+          external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
           hajimari.io/enable: "true"
           hajimari.io/icon: grocy
         hosts:
