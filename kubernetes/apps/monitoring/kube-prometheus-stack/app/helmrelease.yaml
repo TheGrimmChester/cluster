@@ -214,10 +214,15 @@ spec:
                 replacement: '$1'
                 target_label: sensor
 
-          - job_name: mqtt-exporter
+          - job_name: mqtt-exporter-dtu
             scrape_interval: 1s
             static_configs:
-              - targets: [ "mqtt-exporter.home-automation.svc.cluster.local:8080" ]
+              - targets: [ "mqtt-exporter-dtu.home-automation.svc.cluster.local:8080" ]
+
+          - job_name: mqtt-exporter-solar-router
+            scrape_interval: 1s
+            static_configs:
+              - targets: [ "mqtt-exporter-solar-router.home-automation.svc.cluster.local:8080" ]
 
           - job_name: tasmota-cumulus-etage-exporter
             static_configs:
