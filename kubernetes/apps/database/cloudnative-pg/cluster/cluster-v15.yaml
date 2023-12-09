@@ -24,9 +24,11 @@ spec:
   storage:
     size: 20Gi
     storageClass: local-path
+
   superuserSecret:
     name: cloudnative-pg-secret
   postgresql:
+
     pg_hba:
       - host all all all scram-sha-256
 #      - host  all   all  127.0.0.1/32  trust
@@ -55,8 +57,8 @@ spec:
       wal:
         compression: bzip2
         maxParallel: 8
-      destinationPath: s3://cloudnative-pg/
-      endpointURL: "${SECRET_S3_URL}"
+      destinationPath: s3://postgresql/
+      endpointURL: "https://s3.${SECRET_DOMAIN}/"
       serverName: postgres-v15
       s3Credentials:
         accessKeyId:
@@ -94,8 +96,8 @@ spec:
         wal:
           compression: bzip2
           maxParallel: 8
-        destinationPath: s3://cloudnative-pg/
-        endpointURL: "${SECRET_S3_URL}"
+        destinationPath: s3://postgresql/
+        endpointURL: "https://s3.${SECRET_DOMAIN}/"
         s3Credentials:
           accessKeyId:
             name: cloudnative-pg-secret
