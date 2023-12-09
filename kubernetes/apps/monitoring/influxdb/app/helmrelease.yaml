@@ -11,7 +11,7 @@ spec:
     spec:
       # renovate: registryUrl=https://helm.influxdata.com/
       chart: influxdb2
-      version: 2.1.2
+      version: 2.1.1
       sourceRef:
         kind: HelmRepository
         name: influxdata-charts
@@ -29,10 +29,10 @@ spec:
     ingress:
       enabled: true
       className: external
+      hostname: "influxdb.${SECRET_DOMAIN}"
       annotations:
         #        cert-manager.io/cluster-issuer: self-signed-issuer
-        nginx.ingress.kubernetes.io/whitelist-source-range: |
-          10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
+        external-dns.alpha.kubernetes.io/target: "external.${SECRET_DOMAIN}"
         hajimari.io/enable: "true"
         hajimari.io/icon: logos:influxdb
         hajimari.io/info: influxdb
