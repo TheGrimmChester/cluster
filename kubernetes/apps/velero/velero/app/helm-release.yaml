@@ -65,15 +65,6 @@ spec:
         schedule: "0 6 * * *"
         template:
           ttl: "168h"
-      plex-daily:
-        schedule: "0 7 * * *"
-        template:
-          labelSelector:
-            matchLabels:
-              app.kubernetes.io/name: plex
-          ttl: "120h"
-          includedNamespaces:
-            - media
 
     metrics:
       enabled: true
