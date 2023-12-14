@@ -15,3 +15,4 @@ resources:
   - ./ecojoko-exporter/ks.yaml
   - ./myelectricaldata/ks.yaml
   - ./influxdb/ks.yaml
+  - ./kubernetes-dashboard/ks.yaml
