@@ -35,7 +35,7 @@ spec:
             publicUrl: https://s3.${SECRET_DOMAIN}
       volumeSnapshotLocation:
         - name: default
-          bucket: restic
+          bucket: velerorestic
           provider: aws
           default: true
           config:
