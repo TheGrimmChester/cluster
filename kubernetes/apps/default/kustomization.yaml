@@ -20,3 +20,4 @@ resources:
   - ./photoprism/ks.yaml
   - ./kubernetes-schemas/ks.yaml
   - ./paperless/ks.yaml
+  - ./tesla-dashcam/ks.yaml
