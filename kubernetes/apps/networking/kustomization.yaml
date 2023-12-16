@@ -9,4 +9,4 @@ resources:
   - ./k8s-gateway/ks.yaml
   - ./nginx/ks.yaml
   - ./external-services/
-#  - ./adguard/ks.yaml
+  - ./adguard/ks.yaml
