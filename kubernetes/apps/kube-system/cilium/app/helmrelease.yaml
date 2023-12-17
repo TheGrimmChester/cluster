@@ -90,8 +90,8 @@ spec:
       leaseRetryPeriod: 10s
     # See https://docs.cilium.io/en/latest/network/l2-announcements/#sizing-client-rate-limit
     k8sClientRateLimit:
-      qps: 5
-      burst: 10
+      qps: 150
+      burst: 500
 
     loadBalancer:
       algorithm: maglev
