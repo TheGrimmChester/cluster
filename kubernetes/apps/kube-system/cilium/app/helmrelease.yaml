@@ -85,9 +85,9 @@ spec:
     l2announcements:
       enabled: true
     # Values are high due to https://github.com/cilium/cilium/issues/26586
-      leaseDuration: 300s
+      leaseDuration: 120s
       leaseRenewDeadline: 60s
-      leaseRetryPeriod: 10s
+      leaseRetryPeriod: 1s
     # See https://docs.cilium.io/en/latest/network/l2-announcements/#sizing-client-rate-limit
     k8sClientRateLimit:
       qps: 150
