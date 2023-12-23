@@ -122,8 +122,9 @@ spec:
         enabled: true
         mountPath: /data
         size: 10Mi
-        storageClass: ceph-block
-        accessMode: ReadWriteOnce
+        storageClass: local-path
+        #storageClass: ceph-block
+        #accessMode: ReadWriteOnce
 
 #    topologySpreadConstraints:
 #      - maxSkew: 1
