@@ -4,7 +4,7 @@ kubernetes:
     master:
       hosts:
         truenas2012:
-          ansible_host: 192.168.1.101
+          ansible_host: 192.168.1.43
     worker:
       hosts:
         vm-1:
