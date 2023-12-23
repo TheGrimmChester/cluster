@@ -101,21 +101,21 @@ spec:
 #      config:
 #        enabled: true
 #        type: nfs
-#        server: "192.168.1.92"
+#        server: "192.168.1.101"
 #        path: /mnt/Apps/kube/volumes/plex
 #        mountPath: /config
 #        readOnly: false
 #      media:
 #        enabled: true
 #        type: nfs
-#        server: "192.168.1.92"
+#        server: "192.168.1.101"
 #        path: /mnt/Entertainments
 #        mountPath: /media/Entertainments
 #        readOnly: false
 #      media-external:
 #        enabled: true
 #        type: nfs
-#        server: "192.168.1.92"
+#        server: "192.168.1.101"
 #        path: /mnt/ntfs/Entertainment
 #        mountPath: /media/external/Entertainments
 #        readOnly: false
@@ -137,14 +137,14 @@ spec:
       media:
         enabled: true
         type: nfs
-        server: "192.168.1.92"
+        server: "192.168.1.101"
         path: /mnt/Entertainments
         mountPath: /media/Entertainments
         readOnly: false
       media-external:
         enabled: true
         type: nfs
-        server: "192.168.1.92"
+        server: "192.168.1.101"
         path: /mnt/ntfs/Entertainment
         mountPath: /media/external/Entertainments
         readOnly: false
