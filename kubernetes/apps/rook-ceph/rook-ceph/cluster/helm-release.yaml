@@ -137,7 +137,7 @@ spec:
 
           - name: "truenas2012"
             devices:
-              - name: "/dev/disk/by-id/usb-Realtek_RTL9210_NVME_012345678904-0:0"
+              - name: "/dev/disk/by-id/scsi-0QEMU_QEMU_HARDDISK_drive-scsi1"
 
 #          - name: "truenas2012"
 #            devices:
