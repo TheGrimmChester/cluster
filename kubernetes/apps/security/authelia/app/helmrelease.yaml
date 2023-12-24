@@ -124,7 +124,7 @@ spec:
         size: 10Mi
         storageClass: local-path
         #storageClass: ceph-block
-        #accessMode: ReadWriteOnce
+        accessMode: ReadWriteOnce
 
 #    topologySpreadConstraints:
 #      - maxSkew: 1
