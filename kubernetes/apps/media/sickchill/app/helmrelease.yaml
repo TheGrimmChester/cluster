@@ -37,7 +37,7 @@ spec:
 
     image:
       repository: lscr.io/linuxserver/sickchill
-      tag: 2023.6.27@sha256:b97ff0ac06b44f931451e379e60e3adc8a396c7fb04e07bc6426bda13e42e6c3
+      tag: 2023.6.27@sha256:3d2b623d82ed9a5fd28415b92d0e0d6dc65f0063e209a71006090099362393be
       imagePullPolicy: IfNotPresent
     env:
       TZ: "Europe/Paris"
