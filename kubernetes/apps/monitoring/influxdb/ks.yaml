@@ -10,6 +10,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-rook-ceph-cluster
+    - name: cluster-apps-nginx-external
   path: './kubernetes/apps/monitoring/influxdb/app/'
   prune: true
   sourceRef:

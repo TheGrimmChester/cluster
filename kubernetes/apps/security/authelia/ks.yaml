@@ -8,6 +8,7 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-glauth
+    - name: cluster-apps-cloudnative-pg
     - name: cluster-apps-redis
   path: ./kubernetes/apps/security/authelia/app
   prune: true

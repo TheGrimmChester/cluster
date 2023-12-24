@@ -7,9 +7,11 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
+    - name: cluster-apps-nginx-external
     - name: cluster-apps-rook-ceph-cluster
     - name: cluster-apps-volsync
     - name: cluster-apps-cloudnative-pg
+    - name: cluster-apps-authelia
   path: ./kubernetes/apps/default/teslamate/app
   prune: true
   sourceRef:

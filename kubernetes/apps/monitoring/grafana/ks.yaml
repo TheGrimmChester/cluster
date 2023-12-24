@@ -9,6 +9,7 @@ spec:
   dependsOn:
     - name: cluster-apps-cloudnative-pg
     - name: cluster-apps-nginx-external
+    - name: cluster-apps-authelia
   path: ./kubernetes/apps/monitoring/grafana/app
   prune: true
   sourceRef:

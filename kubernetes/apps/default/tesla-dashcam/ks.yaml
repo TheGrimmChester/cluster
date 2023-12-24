@@ -6,6 +6,8 @@ metadata:
   name: cluster-apps-tesla-dashcam
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: cluster-apps-teslamate
   path: ./kubernetes/apps/default/tesla-dashcam/app
   prune: true
   sourceRef:

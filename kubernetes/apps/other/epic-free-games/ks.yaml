@@ -9,6 +9,8 @@ metadata:
 spec:
   dependsOn:
     - name: cluster-apps-nginx-external
+    - name: cluster-apps-rook-ceph-cluster
+    - name: cluster-apps-volsync
   interval: 10m
   path: "./kubernetes/apps/other/epic-free-games/app"
   prune: true
