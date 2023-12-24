@@ -98,13 +98,13 @@ spec:
       supplementalGroups: [44, 109, 10000]
 
     persistence:
-#      config:
-#        enabled: true
-#        type: nfs
-#        server: "192.168.1.101"
-#        path: /mnt/Apps/kube/volumes/plex
-#        mountPath: /config
-#        readOnly: false
+      config:
+        enabled: true
+        type: nfs
+        server: "192.168.1.101"
+        path: /mnt/Apps/kube/volumes/plex
+        mountPath: /config
+        readOnly: false
 #      media:
 #        enabled: true
 #        type: nfs
@@ -119,11 +119,6 @@ spec:
 #        path: /mnt/ntfs/Entertainment
 #        mountPath: /media/external/Entertainments
 #        readOnly: false
-      config:
-        enabled: true
-        type: hostPath
-        hostPath: "/mnt/Backup/restore/Apps/plex"
-        mountPath: "/config"
 #      media:
 #        enabled: true
 #        type: hostPath
