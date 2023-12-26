@@ -168,7 +168,7 @@ spec:
         memory: 500Mi
     sidecars:
       exporter:
-        image: ghcr.io/kpetremann/mqtt-exporter:latest
+        image: ghcr.io/kpetremann/mqtt-exporter:v1.3.0
         imagePullPolicy: IfNotPresent
         env:
           - { name: LOG_LEVEL, value: DEBUG }

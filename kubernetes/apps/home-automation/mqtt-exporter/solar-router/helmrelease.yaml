@@ -30,7 +30,7 @@ spec:
   values:
     image:
       repository: ghcr.io/kpetremann/mqtt-exporter
-      tag: latest
+      tag: v1.3.0
 
     envFrom:
       - secretRef:
