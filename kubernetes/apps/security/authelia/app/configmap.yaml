@@ -39,6 +39,7 @@ data:
             - '82.66.187.107'
             - '2a03:d604:200:8700:b656:8ec0:85fe:9f80'
             - '2a01:e0a:bc2:a410:8787:873b:5ab0:c710'
+            - '2001:861:2c23:4e40::/60'
       default_policy: deny
       rules:
         # Disable Authelia for local network
