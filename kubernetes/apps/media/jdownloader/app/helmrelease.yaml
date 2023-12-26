@@ -146,11 +146,18 @@ spec:
         size: 1Gi
         storageClass: ceph-block
         accessMode: ReadWriteOnce
+#      output:
+#        enabled: true
+#        type: hostPath
+#        hostPath: "/mnt/Entertainments/Downloads"
+#        mountPath: "/output"
       output:
         enabled: true
-        type: hostPath
-        hostPath: "/mnt/Entertainments/Downloads"
-        mountPath: "/output"
+        type: nfs
+        server: "192.168.1.101"
+        path: /mnt/Entertainments/Downloads
+        mountPath: /output
+        readOnly: false
 #
 #      output:
 #        enabled: true
