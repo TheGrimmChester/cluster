@@ -69,22 +69,22 @@ spec:
         storageClass: ceph-block
 
     persistence:
-#      media:
-#        enabled: true
-#        type: nfs
-#        server: "192.168.1.101"
-#        path: /mnt/Entertainments
-#        mountPath: /media/Entertainments
-#        readOnly: false
       media:
         enabled: true
-        type: hostPath
-        hostPath: "/mnt/Entertainments"
-        mountPath: "/media/Entertainments"
+        type: nfs
+        server: "192.168.1.101"
+        path: /mnt/Entertainments
+        mountPath: /media/Entertainments
+        readOnly: false
+#      media:
+#        enabled: true
+#        type: hostPath
+#        hostPath: "/mnt/Entertainments"
+#        mountPath: "/media/Entertainments"
 
     nodeSelector:
       #      node-role.kubernetes.io/worker: "true"
-      intel.feature.node.kubernetes.io/gpu: "true"
+#      intel.feature.node.kubernetes.io/gpu: "true"
       kubernetes.io/hostname: "truenas2012"
 
     affinity:
