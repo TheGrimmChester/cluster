@@ -46,7 +46,7 @@ spec:
 
     cephClusterSpec:
       mon:
-        count: 2
+        count: 1
         allowMultiplePerNode: false
 #      dataDirHostPath: /var/lib/rook
 #      placement:
@@ -198,7 +198,7 @@ spec:
         spec:
           failureDomain: host
           replicated:
-            size: 2
+            size: 1
         storageClass:
           enabled: true
           name: ceph-block
@@ -221,11 +221,11 @@ spec:
         spec:
           metadataPool:
             replicated:
-              size: 2
+              size: 1
           dataPools:
             - failureDomain: host
               replicated:
-                size: 2
+                size: 1
           metadataServer:
             activeCount: 1
             activeStandby: true
@@ -257,11 +257,11 @@ spec:
           metadataPool:
             failureDomain: host
             replicated:
-              size: 2
+              size: 1
           dataPool:
             failureDomain: host
             erasureCoded:
-              dataChunks: 2
+              dataChunks: 1
               codingChunks: 0
           preservePoolsOnDelete: true
           gateway:
