@@ -32,7 +32,6 @@ spec:
                   operator: In
                   values:
                     - truenas2012
-                    - truenas2012
     controller:
       replicas: 2
       strategy: RollingUpdate

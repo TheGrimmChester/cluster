@@ -36,7 +36,6 @@ spec:
                   operator: In
                   values:
                     - truenas2012
-                    - truenas2012
 
     image:
       registry: quay.io
@@ -93,7 +92,6 @@ spec:
                     operator: In
                     values:
                       - truenas2012
-                      - truenas2012
 
       enabled: true
       extraFlags:
@@ -126,7 +124,6 @@ spec:
                   - key: kubernetes.io/hostname
                     operator: In
                     values:
-                      - truenas2012
                       - truenas2012
 
       enabled: true

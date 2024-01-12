@@ -46,7 +46,6 @@ spec:
                     operator: In
                     values:
                       - truenas2012
-                      - truenas2012
 
     sentinel:
       enabled: true
@@ -81,5 +80,4 @@ spec:
                 - key: kubernetes.io/hostname
                   operator: In
                   values:
-                    - truenas2012
                     - truenas2012

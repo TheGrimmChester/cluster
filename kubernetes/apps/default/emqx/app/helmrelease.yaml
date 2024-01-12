@@ -108,4 +108,3 @@ spec:
                   operator: In
                   values:
                     - truenas2012
-                    - truenas2012
