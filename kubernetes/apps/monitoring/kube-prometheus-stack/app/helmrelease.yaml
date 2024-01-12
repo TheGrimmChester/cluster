@@ -41,7 +41,6 @@ spec:
                     operator: In
                     values:
                       - truenas2012
-                      - truenas2012
 
     grafana:
       enabled: false
@@ -60,7 +59,6 @@ spec:
                   - key: kubernetes.io/hostname
                     operator: In
                     values:
-                      - truenas2012
                       - truenas2012
 
       metricLabelsAllowlist:
@@ -105,7 +103,7 @@ spec:
     kubeControllerManager:
       enabled: true
       endpoints: &cp
-        - 192.168.1.98
+        - 192.168.1.49
       serviceMonitor:
         metricRelabelings:
           # Remove duplicate metrics
@@ -148,7 +146,7 @@ spec:
       thanosServiceMonitor:
         enabled: true
       prometheusSpec:
-        replicas: 2
+        replicas: 1
         replicaExternalLabelName: __replica__
         ruleSelectorNilUsesHelmValues: false
         serviceMonitorSelectorNilUsesHelmValues: false
@@ -479,7 +477,6 @@ spec:
                 - key: kubernetes.io/hostname
                   operator: In
                   values:
-                    - truenas2012
                     - truenas2012
 #      podAffinity:
 #        requiredDuringSchedulingIgnoredDuringExecution:
