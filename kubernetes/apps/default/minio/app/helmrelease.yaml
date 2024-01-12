@@ -141,4 +141,4 @@ spec:
       limits:
         memory: 750Mi
     nodeSelector:
-      kubernetes.io/hostname: "vm-1"
+      kubernetes.io/hostname: "truenas2012"

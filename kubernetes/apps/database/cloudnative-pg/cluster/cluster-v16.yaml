@@ -16,7 +16,7 @@ spec:
                 operator: In
                 values:
                   - truenas2012
-  #                  - vm-1
+  #                  - truenas2012
 
   instances: 1
   imageName: ghcr.io/cloudnative-pg/postgresql:16

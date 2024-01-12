@@ -186,7 +186,7 @@ spec:
           - secretRef:
               name: zigbee2mqtt-secret
     nodeSelector:
-      kubernetes.io/hostname: "vm-1"
+      kubernetes.io/hostname: "truenas2012"
 #    affinity:
 #      podAffinity:
 #        requiredDuringSchedulingIgnoredDuringExecution:

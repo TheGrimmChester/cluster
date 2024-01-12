@@ -49,17 +49,17 @@ spec:
         count: 2
         allowMultiplePerNode: false
 #      dataDirHostPath: /var/lib/rook
-      placement:
-        all:
-          nodeAffinity:
-            requiredDuringSchedulingIgnoredDuringExecution:
-              nodeSelectorTerms:
-                - matchExpressions:
-                    - key: kubernetes.io/hostname
-                      operator: In
-                      values:
-                        - vm-1
-                        - truenas2012
+#      placement:
+#        all:
+#          nodeAffinity:
+#            requiredDuringSchedulingIgnoredDuringExecution:
+#              nodeSelectorTerms:
+#                - matchExpressions:
+#                    - key: kubernetes.io/hostname
+#                      operator: In
+#                      values:
+#                        - vm-1
+#                        - truenas2012
 
       # cephVersion:
       # image: quay.io/ceph/ceph:v17.2.0
@@ -130,10 +130,10 @@ spec:
         config:
           osdsPerDevice: "1"
         nodes:
-          - name: "vm-1"
-            devices:
-#              - name: "/dev/mapper/ubuntu--vg-rook--ceph"
-              - name: "/dev/disk/by-id/scsi-SRealtek_RTL9210_NVME_0000000000000000"
+#          - name: "vm-1"
+#            devices:
+##              - name: "/dev/mapper/ubuntu--vg-rook--ceph"
+#              - name: "/dev/disk/by-id/scsi-SRealtek_RTL9210_NVME_0000000000000000"
 
           - name: "truenas2012"
             devices:

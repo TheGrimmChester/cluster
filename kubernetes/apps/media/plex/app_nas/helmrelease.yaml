@@ -155,7 +155,7 @@ spec:
 
 #    nodeSelector:
 #      intel.feature.node.kubernetes.io/gpu: "true"
-#      kubernetes.io/hostname: "vm-1"
+#      kubernetes.io/hostname: "truenas2012"
 #    resources:
 #      requests:
 #        gpu.intel.com/i915: 1
